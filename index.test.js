@@ -9,10 +9,11 @@ describe("Stack Class", () => {
 });
 
 const { Queue } = require("./index");
-describe("Queue Class", ()=> {
-  it("#push new item to queue", () => {
-    const queue = Queue();
-    queue.push(1);
-    expect(queue.peek())
+describe("Queue Class", () => {
+  it("#enqueue adds item to back of array", () => {
+    const queue = new Queue();
+    queue.enqueue("fox");
+    expect(queue.count).toBe(1);
+    expect(queue.next).toBe("fox");
   });
-})
+});
